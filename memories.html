@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Memories 📸</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<script>
+if (performance.navigation.type === 1) {
+window.location.href = "index.html";
+}
+</script>
+
+</head>
+
+<body>
+
+<section class="page">
+
+<h2>Our Memories 📸</h2>
+
+<div class="gallery-grid">
+
+<img src="photos/pic1.jpeg">
+<img src="photos/pic2.jpeg">
+<img src="photos/pic3.jpeg">
+<img src="photos/pic4.jpeg">
+<img src="photos/pic5.jpeg">
+<img src="photos/pic6.jpeg">
+<img src="photos/pic7.jpeg">
+<img src="photos/pic8.jpeg">
+<img src="photos/pic9.jpeg">
+<img src="photos/pic10.jpeg">
+<img src="photos/pic11.jpeg">
+
+</div>
+
+<button class="next-btn" onclick="location.href='letter.html'">
+Next 💌
+</button>
+
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+<img id="lightbox-img">
+</div>
+
+<script>
+
+const images = document.querySelectorAll(".gallery-grid img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+images.forEach(img => {
+
+img.addEventListener("click", () => {
+
+lightbox.style.display = "flex";
+lightboxImg.src = img.src;
+
+});
+
+});
+
+lightbox.addEventListener("click", () => {
+
+lightbox.style.display = "none";
+
+});
+
+</script>
+
+</body>
+</html>

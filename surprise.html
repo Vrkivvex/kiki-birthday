@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Last Thing 💗</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<script>
+if (performance.navigation.type === 1) {
+window.location.href = "index.html";
+}
+</script>
+
+</head>
+
+<body class="heartbeat-bg"></body>
+
+<section class="page">
+
+<h2>One Last Thing...</h2>
+
+<p class="letter-text">
+No matter where life takes us,<br>
+I will always be grateful that I met you.<br><br>
+
+You make my life brighter in ways words cannot explain.<br><br>
+
+I love you 💗
+</p>
+
+</section>
+
+<div id="heart-explosion"></div>
+
+<script>
+
+const container = document.getElementById("heart-explosion");
+
+function createHeart(){
+
+const heart = document.createElement("div");
+
+heart.classList.add("explode-heart");
+
+heart.innerHTML = "💗";
+
+heart.style.left = Math.random()*100 + "vw";
+heart.style.top = Math.random()*100 + "vh";
+
+container.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},2000);
+
+}
+
+for(let i=0;i<80;i++){
+
+setTimeout(createHeart,i*40);
+
+}
+
+</script>
+
+</body>
+</html>
